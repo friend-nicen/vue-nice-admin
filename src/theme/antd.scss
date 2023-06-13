@@ -1,0 +1,83 @@
+/* antd scss变量 */
+$primary-color: #07c160; // 全局主色
+$primary-hover: #f7fdfa;
+$link-color: #07c160; // 链接色
+$success-color: #52c41a; // 成功色
+$warning-color: #faad14; // 警告色
+$error-color: #f5222d; // 错误色
+$font-size-base: 14px; // 主字号
+$heading-color: rgba(0, 0, 0, 0.85); // 标题色
+$text-color: rgba(0, 0, 0, 0.65); // 主文本色
+$text-color-secondary: rgba(0, 0, 0, 0.45); // 次文本色
+$disabled-color: rgba(0, 0, 0, 0.25); // 失效色
+$border-radius-base: 4px; // 组件/浮层圆角
+$border-color-base: #d9d9d9; // 边框色
+$box-shadow-base: 0 2px 8px rgba(0, 0, 0, 0.15); // 浮层阴影
+$root-entry-name: default;
+$table-td: #ecfaf3;
+$table-hover: #f7fdfa;
+
+/*
+  重置antd 组件字体的大小
+*/
+html {
+  .ant-btn, .ant-checkbox-wrapper, .ant-form-item-content,
+  .ant-form .ant-form-item-label, .ant-input, .ant-input-number,
+  .ant-modal-body, .ant-radio-group-button .ant-radio-wrapper,
+  .ant-radio-wrapper, .ant-select, .ant-select-input, .ant-select-item,
+  .ant-select-multiple .ant-select-selection .ant-select-placeholder,
+  .ant-select-single .ant-select-selection .ant-select-placeholder,
+  .ant-select-single .ant-select-selection .ant-select-selected-value,
+  .ant-table, .ant-tooltip-popper, .ant-form-item-label > label,
+  .ant-picker-input > input, .ant-form-item-explain,
+  .ant-badge-status-text, .ant-pagination, .ant-radio-button-wrapper,
+  .ant-table.ant-table-small, .ant-empty-normal, .ant-tree-title,
+  .ant-empty-description, .ant-pro-table-alert-info, .ant-table.ant-table-middle,
+  .ant-pro-table td.ant-table-cell > a, .ant-typography, .ant-tooltip-inner,
+  .ant-card.ant-card-small .ant-card-head, .ant-input-suffix, .ant-dropdown-menu-item,
+  .ant-dropdown-menu-submenu-title, .ant-form label, .ant-input-search-button .ant-tree ul,
+  .ant-cascader-picker-label, .ant-cascader-menu {
+    font-size: $font-size-sm !important;;
+  }
+}
+
+
+/* 卡片组件的样式 */
+.ant-card-head {
+  padding: 2px 1.25rem !important;
+
+  .ant-card-head-title {
+
+    @include flex-center;
+    font-size: 17.5px !important;
+    padding: 0;
+    white-space: nowrap;
+
+    &:before {
+      @include flex-center;
+      margin: 2.5px 5px 0 0;
+      height: 0.78rem;
+      content: "";
+      width: 3px;
+      border-radius: 5px;
+      background-color: $primary-color;
+    }
+  }
+}
+
+/* 布局组件的一些调整 */
+.ant-layout {
+  min-height: unset;
+}
+
+
+/* 表格组件鼠标悬浮时的样式 */
+.ant-table-tbody > tr.ant-table-row:hover > td, .ant-table-tbody > tr > td.ant-table-cell-row-hover {
+  background: $primary-hover;
+}
+
+.ant-table-sticky-scroll-bar {
+  height: 6.5px !important;
+}
+
+

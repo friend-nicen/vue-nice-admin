@@ -1,0 +1,115 @@
+/* 自定义 主题*/
+$primary: #07c160; /*主色*/
+$sub: #FFA600; /*辅助色*/
+
+$black: #181a1a;
+$text: #262626; /*字体颜色*/
+$sub-text: #626366; /*字体辅助色+*/
+$sub-sub-text: #889191; /*次级字体*/
+
+$admin-header-height: 64px;
+
+$admin-sider-bg: hsl(180deg, 23%, 97%); /*侧边栏背景*/
+$admin-sider-shadow: 2px 0 8px rgba(#1D2329, 0.05); /*侧边栏阴影*/
+$admin-menu-color: #4e5969; //菜单字体颜色
+
+$page-bg-color: white; //内容区域背景色
+
+$border: #e6e6e6; /*边框*/
+$border-2: #889191;
+
+$hover: #f5f6f7; /*hover*/
+$bg-color: white; /*背景颜色*/
+
+$card-bg-color: #f2f3f5; /*卡片背景*/
+
+
+$shadow: 0 1px 3px rgba(#001529, 0.12); /*基础阴影*/
+$shadow-2: rgba(19, 9, 40, 0.16) 0px 0px 36px 12px; /*基础阴影*/
+
+/*标准字体大小*/
+$font-size: 16px;
+$font-size-m: 15px;
+$font-size-xl: 14px;
+$font-size-md: 13px;
+$font-size-sm: 14px;
+$font-size-sm-sm: 10px;
+
+$sidebar-menu-size: 15px;
+$border-form-item: #d9d9d9; /*表单label左边框*/
+$margin-menu: 5px;
+
+/*内部元素上下居中*/
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
+/*卡片背景*/
+@mixin white {
+  background-color: $page-bg-color;
+  border-radius: 4px;
+}
+
+
+/*占满全屏不超出*/
+@mixin full {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 水平分割线样式 */
+@mixin diliver {
+  .horizontal {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    width: 100%;
+    color: $text;
+    font-size: $font-size-sm;
+
+    &:before {
+      width: 100%;
+      content: " ";
+      margin-right: 2px;
+      border-top: 1px solid $border;
+    }
+
+    &:after {
+      width: 100%;
+      content: " ";
+      margin-left: 2px;
+      border-top: 1px solid $border;
+      position: relative;
+      top: 50%;
+    }
+  }
+}
+
+/* 文字不换行 */
+@mixin nowrap {
+  word-wrap: break-word;
+  word-spacing: normal;
+  word-break: break-all;
+}
+
+/* 特定的div样式 */
+@mixin card {
+  .card {
+    min-height: calc(100vh - 95px);
+
+    :deep(.ant-card-head-title) {
+      padding: 16px 0;
+    }
+
+    :deep(.ant-image) {
+      .image {
+        max-height: 60px;
+      }
+    }
+
+    :deep(.ant-card-body) {
+      padding: 16px 24px;
+    }
+  }
+}
